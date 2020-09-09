@@ -14,7 +14,7 @@ class FavouriteListViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = .systemBlue
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
 
