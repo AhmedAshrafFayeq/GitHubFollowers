@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GFButtomn: UIButton {
+class GFButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

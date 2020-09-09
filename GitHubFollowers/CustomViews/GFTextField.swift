@@ -12,7 +12,7 @@ class GFTextField: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        configureTextField()
     }
     
     required init?(coder: NSCoder) {
