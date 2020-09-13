@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
     let usernameTextField   = GFTextField()
     let getFollowersButton  = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     
+    let padding: CGFloat = 50
+    
     var isUsernameEntered: Bool {
         return !usernameTextField.text!.isEmpty
     }
@@ -57,9 +59,9 @@ class SearchViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
-            usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            usernameTextField.heightAnchor.constraint(equalToConstant: 50)
+            usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            usernameTextField.heightAnchor.constraint(equalToConstant: padding)
         ])
     }
     
@@ -68,10 +70,10 @@ class SearchViewController: UIViewController {
         getFollowersButton.addTarget(self, action: #selector(pushFollowersListViewController), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            getFollowersButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
-            getFollowersButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            getFollowersButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            getFollowersButton.heightAnchor.constraint(equalToConstant: 50)
+            getFollowersButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -padding),
+            getFollowersButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            getFollowersButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            getFollowersButton.heightAnchor.constraint(equalToConstant: padding)
         ])
     }
     
