@@ -25,6 +25,7 @@
 		6D153C7B250F7D080013D945 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D153C7A250F7D080013D945 /* ErrorMessage.swift */; };
 		6D153C7E250FB8080013D945 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D153C7D250FB8080013D945 /* FollowerCell.swift */; };
 		6D153C80250FB8A10013D945 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D153C7F250FB8A10013D945 /* GFAvatarImageView.swift */; };
+		6D153C822510F8510013D945 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D153C812510F8510013D945 /* UIHelper.swift */; };
 		6D701D06250E47F700249229 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D701D05250E47F700249229 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		6D153C7A250F7D080013D945 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		6D153C7D250FB8080013D945 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		6D153C7F250FB8A10013D945 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		6D153C812510F8510013D945 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		6D701D05250E47F700249229 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				6D153C7A250F7D080013D945 /* ErrorMessage.swift */,
+				6D153C812510F8510013D945 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				6D153C71250A69A90013D945 /* UIViewController+Extension.swift in Sources */,
 				6D153C662508087F0013D945 /* GFTextField.swift in Sources */,
 				6D153C612507ED5B0013D945 /* FavouriteListViewController.swift in Sources */,
+				6D153C822510F8510013D945 /* UIHelper.swift in Sources */,
 				6D153C80250FB8A10013D945 /* GFAvatarImageView.swift in Sources */,
 				6D153C4F2507E6C10013D945 /* SearchViewController.swift in Sources */,
 				6D153C6825090AB30013D945 /* FollowersListViewController.swift in Sources */,
