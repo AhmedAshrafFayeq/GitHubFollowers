@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GitHubFollowers
 //
-//  Created by Ahmed Fayek on 9/14/20.
+//  Created by Ahmed Fayek on 9/29/20.
 //  Copyright © 2020 Ahmed Fayek. All rights reserved.
 //
 
