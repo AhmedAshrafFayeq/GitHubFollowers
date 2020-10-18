@@ -8,11 +8,15 @@
 
 import UIKit
 
+protocol FollowersListViewControllerDelegate: class{
+    func didRequestFollowers(for username: String)
+}
+
 class FollowersListViewController: UIViewController {
     
     enum Section {case main}
 
-    var userName : String!
+    var username : String!
     var followers: [Follower]        = []
     var filteredFollower: [Follower] = []
     var isSearching                  = false
@@ -27,7 +31,7 @@ class FollowersListViewController: UIViewController {
         configureViewController()
         configureSearchController()
         configureCollectionView()
-        getFollowers(username: userName, page: page)
+        getFollowers(username: username, page: page)
         configureDataSource()
         
     }
@@ -39,6 +43,9 @@ class FollowersListViewController: UIViewController {
     func configureViewController(){
         view.backgroundColor    = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles  = true
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem    = addButton
     }
     
     func configureSearchController(){
@@ -62,7 +69,7 @@ class FollowersListViewController: UIViewController {
     
     func getFollowers(username: String, page: Int){
         showLoadingView()
-        NetworkManager.shared.getFollowers(for: userName, page: page) {[weak self] (result) in
+        NetworkManager.shared.getFollowers(for: username, page: page) {[weak self] (result) in
             guard let self = self else{return}
             self.dismissLoadingView()
             switch(result){
@@ -99,6 +106,10 @@ class FollowersListViewController: UIViewController {
         }
     }
     
+    @objc func addButtonTapped(){
+        
+    }
+    
 }
 
 extension FollowersListViewController : UICollectionViewDelegate {
@@ -111,7 +122,7 @@ extension FollowersListViewController : UICollectionViewDelegate {
         if offsetY > contentHeight - height {
             guard hasMoreFollowers else { return }
             page += 1
-            getFollowers(username: userName, page: page)
+            getFollowers(username: username, page: page)
         }
     }
     
@@ -121,6 +132,7 @@ extension FollowersListViewController : UICollectionViewDelegate {
         
         let userInfoVC              = UserInfoViewController()
         userInfoVC.username         = follower.login
+        userInfoVC.delegate         = self
         let navigationController    = UINavigationController(rootViewController: userInfoVC)
         present(navigationController, animated: true)        
     }
@@ -141,3 +153,14 @@ extension FollowersListViewController : UISearchResultsUpdating, UISearchBarDele
     }
 }
 
+extension FollowersListViewController: FollowersListViewControllerDelegate{
+    func didRequestFollowers(for username: String) {
+        self.username   = username
+        title           = username
+        page            = 1
+        followers.removeAll()
+        filteredFollower.removeAll()
+        colloectionView.setContentOffset(.zero, animated: true)
+        getFollowers(username: username, page: page)
+    }
+}

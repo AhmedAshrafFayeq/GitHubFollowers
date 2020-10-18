@@ -35,6 +35,8 @@
 		6D8A141A25372AC000853343 /* GFItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8A141925372AC000853343 /* GFItemInfoViewController.swift */; };
 		6D8A141C253731D100853343 /* GFRepoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8A141B253731D100853343 /* GFRepoItemViewController.swift */; };
 		6D8A141E2537337A00853343 /* GFFollowerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8A141D2537337A00853343 /* GFFollowerItemViewController.swift */; };
+		6D8A1423253884AD00853343 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8A1422253884AD00853343 /* String+Ext.swift */; };
+		6D8A1425253884C400853343 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8A1424253884C400853343 /* Date+Ext.swift */; };
 		6DF2E3C725191ABA00D8CA94 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF2E3C625191ABA00D8CA94 /* GFEmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		6D8A141925372AC000853343 /* GFItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoViewController.swift; sourceTree = "<group>"; };
 		6D8A141B253731D100853343 /* GFRepoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemViewController.swift; sourceTree = "<group>"; };
 		6D8A141D2537337A00853343 /* GFFollowerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemViewController.swift; sourceTree = "<group>"; };
+		6D8A1422253884AD00853343 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		6D8A1424253884C400853343 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		6DF2E3C625191ABA00D8CA94 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				6D153C70250A69A90013D945 /* UIViewController+Extension.swift */,
+				6D8A1422253884AD00853343 /* String+Ext.swift */,
+				6D8A1424253884C400853343 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +354,8 @@
 				6D61F7BC252B3AD9008E2B33 /* GFSecondaryTitleLabel.swift in Sources */,
 				6DF2E3C725191ABA00D8CA94 /* GFEmptyStateView.swift in Sources */,
 				6D701D06250E47F700249229 /* NetworkManager.swift in Sources */,
+				6D8A1423253884AD00853343 /* String+Ext.swift in Sources */,
+				6D8A1425253884C400853343 /* Date+Ext.swift in Sources */,
 				6D153C642508076E0013D945 /* GFButtomn.swift in Sources */,
 				6D8A141A25372AC000853343 /* GFItemInfoViewController.swift in Sources */,
 				6D24FEAF25234D6800F417B1 /* UserInfoViewController.swift in Sources */,
